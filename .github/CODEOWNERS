@@ -1,0 +1,12 @@
+# Reglas de Code Owners - CarbonBox Document Processing Platform
+# Documentación: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Todos los cambios en cualquier parte del repositorio requieren aprobación obligatoria de @Poli-devs
+* @Poli-devs
+
+# Especificación por capas arquitectónicas
+/backend/src/document-processing/domain/ @Poli-devs
+/backend/src/document-processing/application/ @Poli-devs
+/backend/src/document-processing/infrastructure/ @Poli-devs
+/frontend/src/ @Poli-devs
+.github/ @Poli-devs
