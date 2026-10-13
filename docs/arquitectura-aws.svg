@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="100%" height="100%" style="background:#090d16;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="awsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9900"/>
+      <stop offset="100%" stop-color="#ec7211"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Title & Header -->
+  <rect x="40" y="30" width="1120" height="70" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="70" y="65" fill="#ffffff" font-size="20" font-weight="700">CarbonBox — Arquitectura Cloud en Amazon Web Services (AWS)</text>
+  <text x="70" y="85" fill="#94a3b8" font-size="13">Despliegue empresarial de alta disponibilidad, tolerancia a fallos y auto-escalado serverless</text>
+  <rect x="1000" y="48" width="130" height="32" rx="8" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+  <text x="1022" y="69" fill="#34d399" font-size="12" font-weight="600">AWS Region: us-east-1</text>
+
+  <!-- VPC Container -->
+  <rect x="40" y="120" width="1120" height="600" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="2"/>
+  <text x="65" y="150" fill="#38bdf8" font-size="15" font-weight="700">Amazon VPC (10.0.0.0/16)</text>
+  <text x="240" y="150" fill="#64748b" font-size="12">Segmentación Multi-AZ con Subredes Públicas y Privadas</text>
+
+  <!-- Public Subnets Box -->
+  <rect x="70" y="175" width="280" height="520" rx="12" fill="#1e293b" fill-opacity="0.4" stroke="#475569" stroke-dasharray="4"/>
+  <text x="90" y="200" fill="#f8fafc" font-size="13" font-weight="600">Subredes Públicas (Multi-AZ)</text>
+  
+  <!-- ALB Card -->
+  <rect x="90" y="225" width="240" height="100" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="105" y="240" width="30" height="30" rx="6" fill="#0284c7"/>
+  <text x="113" y="260" fill="#ffffff" font-size="15">⚖️</text>
+  <text x="145" y="252" fill="#ffffff" font-size="13" font-weight="700">Application Load Balancer</text>
+  <text x="145" y="270" fill="#94a3b8" font-size="11">SSL/TLS con AWS ACM</text>
+  <text x="145" y="286" fill="#38bdf8" font-size="11 font-mono">Puerto: 443 / Target Group</text>
+
+  <!-- NAT Gateway Card -->
+  <rect x="90" y="345" width="240" height="85" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="1" filter="url(#shadow)"/>
+  <text x="105" y="375" fill="#f8fafc" font-size="13" font-weight="600">🚪 NAT Gateway (AZ-1 &amp; AZ-2)</text>
+  <text x="105" y="395" fill="#94a3b8" font-size="11">Salida a Internet segura para contenedores</text>
+  <text x="105" y="412" fill="#64748b" font-size="10">Egress-only vía Internet Gateway</text>
+
+  <!-- CloudWatch Card -->
+  <rect x="90" y="450" width="240" height="100" rx="10" fill="#1e293b" stroke="#eab308" stroke-width="1" filter="url(#shadow)"/>
+  <text x="105" y="480" fill="#fef08a" font-size="13" font-weight="600">📊 Amazon CloudWatch</text>
+  <text x="105" y="500" fill="#94a3b8" font-size="11">Logs estructurados Fastify &amp; Worker</text>
+  <text x="105" y="518" fill="#eab308" font-size="11">Métricas de profundidad de SQS</text>
+  <text x="105" y="534" fill="#64748b" font-size="10">Alarmas para Auto-Scaling de ECS</text>
+
+  <!-- Secrets Manager Card -->
+  <rect x="90" y="570" width="240" height="85" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1" filter="url(#shadow)"/>
+  <text x="105" y="600" fill="#fecdd3" font-size="13" font-weight="600">🔐 AWS Secrets Manager</text>
+  <text x="105" y="620" fill="#94a3b8" font-size="11">Credenciales PostgreSQL RDS</text>
+  <text x="105" y="638" fill="#64748b" font-size="10">Rotación automática de contraseñas</text>
+
+  <!-- Private Subnets Box (ECS Tasks) -->
+  <rect x="380" y="175" width="410" height="520" rx="12" fill="#1e293b" fill-opacity="0.4" stroke="#475569" stroke-dasharray="4"/>
+  <text x="400" y="200" fill="#f8fafc" font-size="13" font-weight="600">Subredes Privadas de Cómputo — ECS Cluster (AWS Fargate)</text>
+
+  <!-- API ECS Service Card -->
+  <rect x="405" y="225" width="360" height="180" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+  <text x="425" y="255" fill="#34d399" font-size="15" font-weight="700">🚀 ECS Service: API REST Fastify</text>
+  <text x="425" y="275" fill="#94a3b8" font-size="12">Tareas Serverless Fargate (Mín: 2, Máx: 10)</text>
+  <rect x="425" y="290" width="320" height="40" rx="6" fill="#0f172a" stroke="#334155"/>
+  <text x="435" y="315" fill="#e2e8f0" font-size="11 font-mono">POST /uploads • GET /uploads/:id • Clean Arch</text>
+  <text x="425" y="350" fill="#cbd5e1" font-size="11">• Guarda CSV original en Amazon S3</text>
+  <text x="425" y="368" fill="#cbd5e1" font-size="11">• Encola mensaje de procesamiento en SQS</text>
+  <text x="425" y="386" fill="#cbd5e1" font-size="11">• Inserta registro Upload en RDS con status PENDING</text>
+
+  <!-- Worker ECS Service Card -->
+  <rect x="405" y="430" width="360" height="230" rx="10" fill="#1e293b" stroke="#6366f1" stroke-width="2" filter="url(#shadow)"/>
+  <text x="425" y="460" fill="#818cf8" font-size="15" font-weight="700">⚙️ ECS Service: Processing Worker</text>
+  <text x="425" y="480" fill="#94a3b8" font-size="12">Auto-escalado basado en backlog de SQS</text>
+  <rect x="425" y="495" width="320" height="40" rx="6" fill="#0f172a" stroke="#334155"/>
+  <text x="435" y="520" fill="#e2e8f0" font-size="11 font-mono">FileProcessingWorker • CSV Parser • CQRS</text>
+  <text x="425" y="555" fill="#cbd5e1" font-size="11">• Consume mensajes de cola SQS</text>
+  <text x="425" y="573" fill="#cbd5e1" font-size="11">• Descarga y parsea CSV fila por fila</text>
+  <text x="425" y="591" fill="#cbd5e1" font-size="11">• Batch insert de ActivityData en RDS PostgreSQL</text>
+  <text x="425" y="609" fill="#cbd5e1" font-size="11">• Actualiza status de Upload a COMPLETED o FAILED</text>
+  <text x="425" y="627" fill="#f87171" font-size="11">• Si falla 3 veces reenvía a Dead Letter Queue (DLQ)</text>
+
+  <!-- Managed Services Box (RDS, S3, SQS) -->
+  <rect x="820" y="175" width="310" height="520" rx="12" fill="#1e293b" fill-opacity="0.4" stroke="#475569" stroke-dasharray="4"/>
+  <text x="840" y="200" fill="#f8fafc" font-size="13" font-weight="600">Almacenamiento &amp; Mensajería</text>
+
+  <!-- S3 Bucket Card -->
+  <rect x="840" y="225" width="270" height="110" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="855" y="255" fill="#38bdf8" font-size="14" font-weight="700">📦 Amazon S3 Bucket</text>
+  <text x="855" y="275" fill="#94a3b8" font-size="11">carbonbox-uploads-prod</text>
+  <text x="855" y="295" fill="#cbd5e1" font-size="11">• Bloqueo de acceso público (Private)</text>
+  <text x="855" y="312" fill="#cbd5e1" font-size="11">• Cifrado SSE-S3 en reposo</text>
+  <text x="855" y="328" fill="#64748b" font-size="10">• Lifecycle: Glacier a 90 días</text>
+
+  <!-- SQS & DLQ Card -->
+  <rect x="840" y="355" width="270" height="150" rx="10" fill="#1e293b" stroke="#ec4899" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="855" y="385" fill="#f472b6" font-size="14" font-weight="700">📨 Amazon SQS Queue</text>
+  <text x="855" y="405" fill="#94a3b8" font-size="11">document-processing-queue</text>
+  <text x="855" y="425" fill="#cbd5e1" font-size="11">• Visibility Timeout: 300 seg</text>
+  <rect x="855" y="435" width="240" height="55" rx="6" fill="#0f172a" stroke="#f43f5e"/>
+  <text x="865" y="458" fill="#fb7185" font-size="11" font-weight="700">💀 Dead Letter Queue (DLQ)</text>
+  <text x="865" y="475" fill="#94a3b8" font-size="10">maxReceiveCount: 3 • Alerta CloudWatch</text>
+
+  <!-- RDS PostgreSQL Card -->
+  <rect x="840" y="525" width="270" height="145" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="855" y="555" fill="#60a5fa" font-size="14" font-weight="700">🗄️ Amazon RDS PostgreSQL 15</text>
+  <text x="855" y="575" fill="#94a3b8" font-size="11">Subredes privadas Multi-AZ</text>
+  <text x="855" y="595" fill="#cbd5e1" font-size="11">• Primaria + Standby con failover &lt; 60s</text>
+  <text x="855" y="612" fill="#cbd5e1" font-size="11">• Storage Autoscaling (gp3)</text>
+  <text x="855" y="629" fill="#cbd5e1" font-size="11">• Backups automatizados con PITR</text>
+  <text x="855" y="646" fill="#64748b" font-size="10">• Acceso restringido por Security Group</text>
+
+  <!-- Connection arrows / labels -->
+  <line x1="330" y1="275" x2="405" y2="275" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="765" y1="260" x2="840" y2="260" stroke="#38bdf8" stroke-width="2"/>
+  <line x1="765" y1="360" x2="840" y2="390" stroke="#ec4899" stroke-width="2"/>
+  <line x1="840" y1="410" x2="765" y2="470" stroke="#818cf8" stroke-width="2"/>
+  <line x1="765" y1="580" x2="840" y2="580" stroke="#3b82f6" stroke-width="2"/>
+</svg>
