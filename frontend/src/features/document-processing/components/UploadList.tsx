@@ -37,20 +37,20 @@ export const UploadList: React.FC = () => {
 
   if (uploads.length === 0) {
     return (
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-12 text-center max-w-lg mx-auto shadow-xl">
-        <div className="w-16 h-16 rounded-3xl bg-slate-800 text-slate-400 flex items-center justify-center mx-auto mb-4 border border-slate-700">
+      <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-12 text-center shadow-sm">
+        <div className="w-16 h-16 rounded-2xl bg-slate-800/80 text-slate-400 flex items-center justify-center mx-auto mb-4 border border-slate-700">
           <Inbox className="w-8 h-8 text-emerald-400" />
         </div>
-        <h3 className="text-lg font-bold text-white">No hay cargas registradas aún</h3>
-        <p className="text-sm text-slate-400 mt-1 mb-6">
-          Comienza subiendo tu primer archivo CSV de actividad para procesarlo en segundo plano.
+        <h3 className="text-lg font-bold text-white">No hay cargas registradas en la plataforma</h3>
+        <p className="text-sm text-slate-400 mt-1 mb-6 max-w-md mx-auto">
+          Comience subiendo un archivo CSV de actividad para iniciar el pipeline de procesamiento asíncrono y persistencia relacional.
         </p>
         <Link
           href="/uploads/new"
-          className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-slate-950 bg-emerald-400 hover:bg-emerald-300 rounded-xl transition-all shadow-lg shadow-emerald-500/20"
+          className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-bold text-slate-950 bg-emerald-400 hover:bg-emerald-300 rounded-lg transition-all shadow-md shadow-emerald-500/20"
         >
           <PlusCircle className="w-4 h-4" />
-          <span>Subir Primer CSV</span>
+          <span>Subir Primer Archivo CSV</span>
         </Link>
       </div>
     );
