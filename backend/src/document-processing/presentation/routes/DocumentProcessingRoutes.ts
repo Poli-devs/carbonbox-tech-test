@@ -30,7 +30,7 @@ export async function documentProcessingRoutes(
         body: {
           fileName,
           fileBuffer,
-          userId: 'user-123',
+          userId: (request.headers['x-user-id'] as string) || 'user-123',
         } as CreateUploadRequestBody,
         params: request.params,
         query: request.query,
