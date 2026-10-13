@@ -1,0 +1,14 @@
+{
+  "name": "carbonbox-root",
+  "version": "1.0.0",
+  "description": "CarbonBox Async Document Processing Monorepo Root",
+  "private": true,
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "worker": "npm --prefix backend run worker",
+    "test": "npm --prefix backend test",
+    "lint": "npm --prefix backend run lint && npm --prefix frontend run lint",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build"
+  }
+}

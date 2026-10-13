@@ -142,7 +142,7 @@ En la raíz del proyecto se incluyen dos archivos para evaluar el comportamiento
 ## ☁️ 7. Arquitectura en la Nube (AWS)
 
 Se incluye el diseño completo para el despliegue empresarial en AWS dentro de la carpeta `docs/`:
-- **Diagrama Visual**: [`docs/arquitectura-aws.svg`](docs/arquitectura-aws.svg)
+- **Diagrama Visual**: [`docs/arquitectura-aws.png`](docs/arquitectura-aws.png) / [`docs/arquitectura-aws.svg`](docs/arquitectura-aws.svg)
 - **Documentación Técnica Detallada**: [`docs/arquitectura.md`](docs/arquitectura.md)
 
 *Resumen de Componentes AWS:*

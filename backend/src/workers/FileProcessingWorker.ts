@@ -79,6 +79,7 @@ export class FileProcessingWorker {
           },
           '✅ Upload processed successfully'
         );
+        await this.queue.ack('document-processing-queue', message);
       }
     } catch (error) {
       logger.error({ uploadId, err: error }, '❌ Unhandled error while processing upload job');

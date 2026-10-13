@@ -9,19 +9,24 @@ build/
 .next/
 out/
 
-# Environment variables
+# Environment variables (Never commit real credentials)
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
 !.env.example
+!**/.env.example
+*.env.local
 
-# Temporary and upload storage
-backend/uploads/
+# Temporary, upload and queue storage
+uploads/
+**/uploads/
+.queue/
+**/.queue/
 storage/
 temp/
 *.log
+
+# Documents & Prompt artifacts
+*.docx
 
 # OS & IDE
 .DS_Store
@@ -31,5 +36,5 @@ Thumbs.db
 *.swp
 *.swo
 
-# Docker
+# Docker volumes
 postgres_data/
